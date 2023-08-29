@@ -54,7 +54,8 @@ const bfs = (node, end) => {
 };
 
 const knightMoves = (start, end) => {
-  if (end[0] > 7 || end[0] < 0 || end[1] > 7 || end[1] < 0) {
+  console.log(q);
+  if (end[0] > 7 || end[0] < 0 || end[1] > 7 || end[1] < 0 || start[0] > 7 || start[0] < 0 || start[1] > 7 || start[1] < 0) {
     return 'Out of range, please enter start and end points between [0, 0] and [7, 7]';
   }
   q.push(Node(start));
@@ -69,4 +70,4 @@ const knightMoves = (start, end) => {
   output.forEach((move) => console.log(move));
 };
 
-console.log(knightMoves([3, 3], [7, 0]));
+console.log(knightMoves([0, 0], [2, 4]));
